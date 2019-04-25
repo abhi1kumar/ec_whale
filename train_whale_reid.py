@@ -9,7 +9,8 @@ from datetime import datetime
 
 import sys
 sys.path.insert(0, './src')
-from CustomDatasetFromCSV     import CustomDatasetFromCSV
+from CustomDatasetFromCSV      import CustomDatasetFromCSV
+from CustomDatasetFromCSVTrain import CustomDatasetFromCSVTrain
 
 import torch
 import torch.nn as nn
@@ -125,12 +126,14 @@ batch_size      = 64
 test_batch_size = 32
 num_classes     = 4250
 epochs          = 300
-learning_rate   = 0.0005
+learning_rate   = 0.001
 img_dim         = 224
 
 workers         = 3 
 save_frequency  = 50
-run             = 2
+run             = 3
+dropout_flag    = True
+
 
 train_file      = "/ec_whale/splits/train_remapped.txt"
 val_file        = "/ec_whale/splits/val_remapped.txt"
@@ -176,17 +179,20 @@ transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, tr
 
 print(transformations2)
 
-dataset_from_csv  = CustomDatasetFromCSV(train_file, height = img_dim, width = img_dim, transforms = transformations2)
+dataset_from_csv  = CustomDatasetFromCSVTrain(train_file, height = img_dim, width = img_dim, transforms = transformations)
 train_loader      = torch.utils.data.DataLoader(dataset=dataset_from_csv  ,  batch_size= batch_size, shuffle=True, num_workers = workers)
 
-dataset_from_csv2 = CustomDatasetFromCSV(val_file, height = img_dim, width = img_dim, transforms = transformations)
+dataset_from_csv2 = CustomDatasetFromCSV      (val_file, height = img_dim, width = img_dim, transforms = transformations)
 val_loader        = torch.utils.data.DataLoader(dataset=dataset_from_csv2,  batch_size= test_batch_size, shuffle=False, num_workers = workers)
 
 ########################################################################################
 # Get the model
 ########################################################################################
-model = models.resnet50(pretrained=True)
-model.fc = nn.Sequential(Flatten(), nn.Linear(2048, num_classes))
+model = models.resnet101(pretrained=True)
+if dropout_flag:
+    model.fc = nn.Sequential(Flatten(), nn.Dropout(0.25), nn.Linear(2048, num_classes))
+else:
+    model.fc = nn.Sequential(Flatten(), nn.Dropout(0.25), nn.Linear(2048, num_classes))
 
 model.to(device)
 #print("\nDetailed report of new model parameters")
