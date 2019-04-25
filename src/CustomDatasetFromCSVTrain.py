@@ -17,7 +17,7 @@ from torchvision import transforms
 
 import imgaug.augmenters as iaa
 
-class CustomDatasetFromCSV(Dataset):
+class CustomDatasetFromCSVTrain(Dataset):
     def __init__(self, csv_path, height=224, width=224, transforms=[transforms.ToTensor()]):
         """
         Args:
@@ -59,6 +59,11 @@ class CustomDatasetFromCSV(Dataset):
         delta_h = self.height - img_as_img.size[1]
         padding = (delta_w//2, delta_h//2, delta_w-(delta_w//2), delta_h-(delta_h//2))
         img_padded = ImageOps.expand(img_as_img, padding)
+
+        np_im = np.array(img_padded)
+        #print(np.max(np_im))
+        np_img_aug = self.aug_image(np_im)
+        img_padded = Image.fromarray(np_img_aug.astype('uint8'), 'RGB')
 
         # Transform image to tensor by passsing through the composed version of transforms
         if self.transforms is not None:
