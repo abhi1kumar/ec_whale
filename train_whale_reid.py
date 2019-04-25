@@ -126,17 +126,19 @@ batch_size      = 64
 test_batch_size = 32
 num_classes     = 4250
 epochs          = 300
-learning_rate   = 0.001
+learning_rate   = 0.0005
 img_dim         = 224
 
 workers         = 3 
 save_frequency  = 50
-run             = 3
+
+run             = 5
+arch            = 50
 dropout_flag    = True
 
 
-train_file      = "/ec_whale/splits/train_remapped.txt"
-val_file        = "/ec_whale/splits/val_remapped.txt"
+train_file      = "splits/train_5.7k_cropped_remapped.txt"
+val_file        = "splits/val_5.7k_cropped_remapped.txt"
 
 
 folder          = "models/run"
@@ -175,9 +177,8 @@ print("Using device: {}".format(device))
 # random brightness, Gaussian noise, random crops, and random blur.
 # https://towardsdatascience.com/a-gold-winning-solution-review-of-kaggle-humpback-whale-identification-challenge-53b0e3ba1e84
 transformations  = transforms.Compose([transforms.ToTensor()])
-transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
-
-print(transformations2)
+#transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
+#print(transformations2)
 
 dataset_from_csv  = CustomDatasetFromCSVTrain(train_file, height = img_dim, width = img_dim, transforms = transformations)
 train_loader      = torch.utils.data.DataLoader(dataset=dataset_from_csv  ,  batch_size= batch_size, shuffle=True, num_workers = workers)
@@ -188,11 +189,22 @@ val_loader        = torch.utils.data.DataLoader(dataset=dataset_from_csv2,  batc
 ########################################################################################
 # Get the model
 ########################################################################################
-model = models.resnet101(pretrained=True)
+if (arch == 101):
+    print("Using resnet 101")
+    model = models.resnet101(pretrained=True)
+elif (arch == 50):
+    print("Using resnet 50")    
+    model = models.resnet50(pretrained=True)
+else:
+    print("Unknown model")
+
+
+
 if dropout_flag:
+    print("Using Dropout")
     model.fc = nn.Sequential(Flatten(), nn.Dropout(0.25), nn.Linear(2048, num_classes))
 else:
-    model.fc = nn.Sequential(Flatten(), nn.Dropout(0.25), nn.Linear(2048, num_classes))
+    model.fc = nn.Sequential(Flatten(), nn.Linear(2048, num_classes))
 
 model.to(device)
 #print("\nDetailed report of new model parameters")
