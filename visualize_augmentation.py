@@ -37,7 +37,7 @@ args = ap.parse_args()
 def main():
     workers         = 3
     img_dim         = 224
-    test_repeat     = 6     # No of times augmentation to be done
+    test_repeat     = 2     # No of times augmentation to be done
     test_batch_size = 512   
     rows            = 5     # No of rows/samples to visualize
 
@@ -63,7 +63,7 @@ def main():
 
     #transformations2  = transforms.Compose([transforms.ColorJitter( brightness=0.2, contrast=0.5, saturation=0.2), transforms.ToTensor()])
     transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
-    dataset_from_csv2 = CustomDatasetFromCSV(input_file, img_dim, img_dim, transformations2)
+    dataset_from_csv2 = CustomDatasetFromCSV(input_file, img_dim, img_dim, transformations)
     val_loader2       = torch.utils.data.DataLoader(dataset=dataset_from_csv2,  batch_size=test_batch_size, shuffle=False)
 
     print("Doing test augmentation {} times".format(test_repeat))
