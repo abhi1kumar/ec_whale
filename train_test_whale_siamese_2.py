@@ -139,7 +139,7 @@ def val(model, device, train_loader, val_loader):
         feat_train [start:end, :] = output1.data.cpu().numpy()
         label_train[start:end]    =  labels.data.cpu().numpy()
 
-    print("Train images done")
+    #print("Train images done")
     
     end=0
     for images1, labels in val_loader:
@@ -157,7 +157,7 @@ def val(model, device, train_loader, val_loader):
         feat_val [start:end, :] = output1.data.cpu().numpy()
         label_val[start:end]    =  labels.data.cpu().numpy()
 
-    print("Val images done")
+    #print("Val images done")
 
     cnt = 0
     correct = 0
@@ -168,7 +168,7 @@ def val(model, device, train_loader, val_loader):
             cnt += 1
 
             # Get distances
-            temp = feat_train - feat_val[0]
+            temp = feat_train - feat_val[i]
             dist = np.linalg.norm(temp,axis=1)
             
             min_index  = np.argmin(dist)
@@ -203,7 +203,7 @@ feature_dim     = 512
 workers         = 3 
 save_frequency  = 25
 
-run             = 14
+run             = 15
 arch            = 50
 dropout_flag    = True
 
@@ -249,10 +249,10 @@ print("Using device: {}".format(device))
 # random brightness, Gaussian noise, random crops, and random blur.
 # https://towardsdatascience.com/a-gold-winning-solution-review-of-kaggle-humpback-whale-identification-challenge-53b0e3ba1e84
 transformations  = transforms.Compose([transforms.ToTensor()])
-#transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
+transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
 #print(transformations2)
 
-dataset_from_csv  = SiameseNetworkDataset(train_file, height = img_dim, width = img_dim, transforms = transformations)
+dataset_from_csv  = SiameseNetworkDataset(train_file, height = img_dim, width = img_dim, transforms = transformations2)
 train_loader      = torch.utils.data.DataLoader(dataset=dataset_from_csv  ,  batch_size= batch_size, shuffle=True, num_workers = workers)
 
 dataset_from_csv1 = CustomDatasetFromCSV(train_file1, height = img_dim, width = img_dim, transforms = transformations)

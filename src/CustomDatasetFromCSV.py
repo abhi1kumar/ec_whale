@@ -34,7 +34,6 @@ class CustomDatasetFromCSV(Dataset):
         self.image_arr = np.asarray(self.data_info.iloc[:, 0])
         self.label_arr = np.asarray(self.data_info.iloc[:, 1])
         self.data_len  = len(self.data_info.index)
-    
 
         # Optional Arguments
         self.height = height
