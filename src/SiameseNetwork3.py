@@ -20,6 +20,7 @@ class SiameseNetwork3(torch.nn.Module):
         
         super(SiameseNetwork3, self).__init__()
         self.model    = models.resnet18(pretrained=True)
+        print("Using Siamese Network of Resnet 18")
         self.model.avgpool = nn.MaxPool2d(kernel_size=12)
         self.model.fc = Flatten()
 
