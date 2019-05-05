@@ -1,0 +1,45 @@
+/run_55 Folder exists
+
+===============================================================================
+
+Train file         = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 55   
+Model save folder  = models/run_55
+-------------------------------
+Optimisation Parameters   
+-------------------------------
+lr                 = 0.00050
+epochs             = 100  
+Batch size         = 48   
+Test Batch size    = 16   
+Using device: cuda
+
+================================================================
+Total params: 22,353,024  
+Trainable params: 22,353,024
+Non-trainable params: 0   
+----------------------------------------------------------------
+Input size (MB): 746496.00
+Forward/backward pass size (MB): 369.02
+Params size (MB): 85.27   
+Estimated Total Size (MB): 746950.29
+----------------------------------------------------------------
+Epoch: 1 Training_Loss: 0.138258 Val_acc: 0.271341
+Epoch: 2 Training_Loss: 0.112418 Val_acc: 0.274390
+Epoch: 3 Training_Loss: 0.102168 Val_acc: 0.294207
+Epoch: 4 Training_Loss: 0.095596 Val_acc: 0.297256
+Epoch: 5 Training_Loss: 0.088981 Val_acc: 0.317073
+Epoch: 6 Training_Loss: 0.084965 Val_acc: 0.301829
+Epoch: 7 Training_Loss: 0.081320 Val_acc: 0.294207
+Epoch: 8 Training_Loss: 0.076984 Val_acc: 0.309451
+Epoch: 9 Training_Loss: 0.073801 Val_acc: 0.309451
+Epoch: 10 Training_Loss: 0.069255 Val_acc: 0.300305
+Epoch: 11 Training_Loss: 0.065820 Val_acc: 0.291159
+Epoch: 12 Training_Loss: 0.062295 Val_acc: 0.298780
+Epoch: 13 Training_Loss: 0.059201 Val_acc: 0.268293
+Epoch: 14 Training_Loss: 0.056323 Val_acc: 0.274390
+Epoch: 15 Training_Loss: 0.052456 Val_acc: 0.286585
+Epoch: 16 Training_Loss: 0.050186 Val_acc: 0.278963
+Epoch: 17 Training_Loss: 0.047128 Val_acc: 0.286585
+Epoch: 18 Training_Loss: 0.045614 Val_acc: 0.280488

@@ -1,0 +1,43 @@
+models/run_17 Folder exists
+
+===============================================================================
+
+Train file         = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 17
+Model save folder  = models/run_17
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 100
+Batch size         = 48
+Test Batch size    = 16
+Using device: cuda
+Using Siamese Network of Resnet 18
+
+================================================================
+Total params: 22,353,024
+Trainable params: 22,353,024
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 746496.00
+Forward/backward pass size (MB): 369.02
+Params size (MB): 85.27
+Estimated Total Size (MB): 746950.29
+----------------------------------------------------------------
+Epoch: 1 Training_Loss: 0.130154 Val_acc: 0.277439
+Epoch: 2 Training_Loss: 0.098325 Val_acc: 0.288110
+Epoch: 3 Training_Loss: 0.083097 Val_acc: 0.274390
+Epoch: 4 Training_Loss: 0.068246 Val_acc: 0.254573
+Epoch: 5 Training_Loss: 0.056837 Val_acc: 0.237805
+Epoch: 6 Training_Loss: 0.048261 Val_acc: 0.240854
+Epoch: 7 Training_Loss: 0.039067 Val_acc: 0.228659
+Epoch: 8 Training_Loss: 0.033446 Val_acc: 0.225610
+Epoch: 9 Training_Loss: 0.028560 Val_acc: 0.210366
+Epoch: 10 Training_Loss: 0.025528 Val_acc: 0.217988
+Epoch: 11 Training_Loss: 0.022785 Val_acc: 0.199695
+Epoch: 12 Training_Loss: 0.019647 Val_acc: 0.211890
+Epoch: 13 Training_Loss: 0.018559 Val_acc: 0.205793
+Epoch: 14 Training_Loss: 0.016537 Val_acc: 0.204268
+Epoch: 15 Training_Loss: 0.014840 Val_acc: 0.205793

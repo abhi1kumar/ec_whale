@@ -1,0 +1,35 @@
+models/run_20 Folder exists
+
+===============================================================================
+
+Train file         = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 20
+Model save folder  = models/run_20
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 100
+Batch size         = 48
+Test Batch size    = 16
+Using device: cuda
+Compose(
+    ColorJitter(brightness=[0.8, 1.2], contrast=[0.8, 1.2], saturation=[0.8, 1.2], hue=[-0.02, 0.02])
+    ToTensor()
+)
+Using Siamese Network of Resnet 18
+Epoch: 1 Training_Loss: 0.137516 Val_acc: 0.259146
+Epoch: 2 Training_Loss: 0.099884 Val_acc: 0.245427
+Epoch: 3 Training_Loss: 0.082006 Val_acc: 0.246951
+Epoch: 4 Training_Loss: 0.067978 Val_acc: 0.236280
+Epoch: 5 Training_Loss: 0.058010 Val_acc: 0.227134
+Epoch: 6 Training_Loss: 0.049498 Val_acc: 0.213415
+Epoch: 7 Training_Loss: 0.042556 Val_acc: 0.208841
+Epoch: 8 Training_Loss: 0.037445 Val_acc: 0.193598
+Epoch: 9 Training_Loss: 0.032663 Val_acc: 0.201220
+Epoch: 10 Training_Loss: 0.029147 Val_acc: 0.195122
+Epoch: 11 Training_Loss: 0.025944 Val_acc: 0.199695
+Epoch: 12 Training_Loss: 0.023336 Val_acc: 0.199695
+Epoch: 13 Training_Loss: 0.021790 Val_acc: 0.199695
+Epoch: 14 Training_Loss: 0.020727 Val_acc: 0.187500

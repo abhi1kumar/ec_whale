@@ -1,0 +1,44 @@
+Creating models/run_15
+
+===============================================================================
+
+Train file         = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 15
+Model save folder  = models/run_15
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 100
+Batch size         = 48
+Test Batch size    = 16
+Using device: cuda
+Compose(
+    RandomAffine(degrees=(-12, 12), translate=(0.036, 0.036), scale=(0.9, 1.1))
+    ColorJitter(brightness=[0.8, 1.2], contrast=[0.8, 1.2], saturation=[0.8, 1.2], hue=[-0.02, 0.02])
+    ToTensor()
+)
+Using Siamese Network of Resnet 18
+----------------------------------------------------------------
+Epoch: 1 Training_Loss: 0.144822 Val_acc: 0.246951
+Epoch: 2 Training_Loss: 0.117420 Val_acc: 0.285061
+Epoch: 3 Training_Loss: 0.107372 Val_acc: 0.266768
+Epoch: 4 Training_Loss: 0.099199 Val_acc: 0.253049
+Epoch: 5 Training_Loss: 0.093192 Val_acc: 0.253049
+Epoch: 6 Training_Loss: 0.087494 Val_acc: 0.259146
+Epoch: 7 Training_Loss: 0.083311 Val_acc: 0.228659
+Epoch: 8 Training_Loss: 0.077976 Val_acc: 0.245427
+Epoch: 9 Training_Loss: 0.075389 Val_acc: 0.250000
+Epoch: 10 Training_Loss: 0.070392 Val_acc: 0.237805
+Epoch: 11 Training_Loss: 0.067345 Val_acc: 0.263720
+Epoch: 12 Training_Loss: 0.064136 Val_acc: 0.248476
+Epoch: 13 Training_Loss: 0.060039 Val_acc: 0.243902
+Epoch: 14 Training_Loss: 0.055214 Val_acc: 0.250000
+Epoch: 15 Training_Loss: 0.053769 Val_acc: 0.246951
+Epoch: 16 Training_Loss: 0.049509 Val_acc: 0.242378
+Epoch: 17 Training_Loss: 0.047801 Val_acc: 0.240854
+Epoch: 18 Training_Loss: 0.045525 Val_acc: 0.237805
+Epoch: 19 Training_Loss: 0.043036 Val_acc: 0.248476
+Epoch: 20 Training_Loss: 0.040947 Val_acc: 0.245427
+Epoch: 21 Training_Loss: 0.038044 Val_acc: 0.239329

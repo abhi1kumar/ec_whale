@@ -1,0 +1,56 @@
+Creating models/run_61
+
+===============================================================================
+
+Train file         = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 61
+Model save folder  = models/run_61
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 100
+Batch size         = 48
+Test Batch size    = 16
+Using device: cuda
+Compose(
+    RandomAffine(degrees=(0, 0), translate=(0, 0), scale=(0.9, 1.1))
+    ToTensor()
+)
+Using Siamese Network of Resnet 18
+Epoch: 1 Training_Loss: 0.130471 Val_acc: 0.260671
+Epoch: 2 Training_Loss: 0.103198 Val_acc: 0.301829
+Epoch: 3 Training_Loss: 0.091101 Val_acc: 0.297256
+Epoch: 4 Training_Loss: 0.081940 Val_acc: 0.272866
+Epoch: 5 Training_Loss: 0.074986 Val_acc: 0.278963
+Epoch: 6 Training_Loss: 0.067854 Val_acc: 0.277439
+Epoch: 7 Training_Loss: 0.062006 Val_acc: 0.280488
+Epoch: 8 Training_Loss: 0.056098 Val_acc: 0.278963
+Epoch: 9 Training_Loss: 0.051221 Val_acc: 0.263720
+Epoch: 10 Training_Loss: 0.047396 Val_acc: 0.254573
+Epoch: 11 Training_Loss: 0.043179 Val_acc: 0.242378
+Epoch: 12 Training_Loss: 0.038531 Val_acc: 0.240854
+Epoch: 13 Training_Loss: 0.036843 Val_acc: 0.240854
+Epoch: 14 Training_Loss: 0.033706 Val_acc: 0.250000
+Epoch: 15 Training_Loss: 0.031488 Val_acc: 0.231707
+Epoch: 16 Training_Loss: 0.028953 Val_acc: 0.248476
+Epoch: 17 Training_Loss: 0.026647 Val_acc: 0.245427
+Epoch: 18 Training_Loss: 0.025748 Val_acc: 0.208841
+Epoch: 19 Training_Loss: 0.023709 Val_acc: 0.222561
+Epoch: 20 Training_Loss: 0.022920 Val_acc: 0.237805
+Epoch: 21 Training_Loss: 0.020797 Val_acc: 0.222561
+Epoch: 22 Training_Loss: 0.019202 Val_acc: 0.222561
+Epoch: 23 Training_Loss: 0.018482 Val_acc: 0.221037
+Epoch: 24 Training_Loss: 0.018235 Val_acc: 0.207317
+Epoch: 25 Training_Loss: 0.016718 Val_acc: 0.219512
+Epoch: 26 Training_Loss: 0.015483 Val_acc: 0.213415
+Epoch: 27 Training_Loss: 0.015125 Val_acc: 0.217988
+Epoch: 28 Training_Loss: 0.015189 Val_acc: 0.210366
+Epoch: 29 Training_Loss: 0.014634 Val_acc: 0.202744
+Epoch: 30 Training_Loss: 0.013674 Val_acc: 0.211890
+Epoch: 31 Training_Loss: 0.012320 Val_acc: 0.222561
+Epoch: 32 Training_Loss: 0.011415 Val_acc: 0.202744
+Epoch: 33 Training_Loss: 0.011715 Val_acc: 0.207317
+Epoch: 34 Training_Loss: 0.010843 Val_acc: 0.201220
+Epoch: 35 Training_Loss: 0.010653 Val_acc: 0.214939

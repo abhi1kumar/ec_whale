@@ -1,0 +1,82 @@
+./train_whale_reid.py 
+Creating models/run_4
+
+===============================================================================
+
+Train file         = splits/train_remapped.txt
+Val file           = splits/val_remapped.txt
+Run No             = 4
+Model save folder  = models/run_4
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 300
+Batch size         = 64
+Test Batch size    = 32
+Using device: cuda
+Using Dropout
+Epoch: 1 Training_Loss: 8.392126 Validation_Acc: 0.001
+Epoch: 2 Training_Loss: 8.159982 Validation_Acc: 0.001
+Epoch: 3 Training_Loss: 8.050994 Validation_Acc: 0.001
+Epoch: 4 Training_Loss: 7.944792 Validation_Acc: 0.002
+Epoch: 5 Training_Loss: 7.805916 Validation_Acc: 0.001
+Epoch: 6 Training_Loss: 7.647012 Validation_Acc: 0.002
+Epoch: 7 Training_Loss: 7.435778 Validation_Acc: 0.001
+Epoch: 8 Training_Loss: 7.210163 Validation_Acc: 0.002
+Epoch: 9 Training_Loss: 6.959412 Validation_Acc: 0.002
+Epoch: 10 Training_Loss: 6.703492 Validation_Acc: 0.007
+Epoch: 11 Training_Loss: 6.471988 Validation_Acc: 0.008
+Epoch: 12 Training_Loss: 6.233512 Validation_Acc: 0.007
+Epoch: 13 Training_Loss: 6.033194 Validation_Acc: 0.010
+Epoch: 14 Training_Loss: 5.789773 Validation_Acc: 0.008
+Epoch: 15 Training_Loss: 5.569524 Validation_Acc: 0.011
+Epoch: 16 Training_Loss: 5.331770 Validation_Acc: 0.013
+Epoch: 17 Training_Loss: 5.090784 Validation_Acc: 0.023
+Epoch: 18 Training_Loss: 4.854666 Validation_Acc: 0.019
+Epoch: 19 Training_Loss: 4.652739 Validation_Acc: 0.023
+Epoch: 20 Training_Loss: 4.421027 Validation_Acc: 0.029
+Epoch: 21 Training_Loss: 4.172459 Validation_Acc: 0.033
+Epoch: 22 Training_Loss: 3.950124 Validation_Acc: 0.041
+Epoch: 23 Training_Loss: 3.725718 Validation_Acc: 0.040
+Epoch: 24 Training_Loss: 3.506367 Validation_Acc: 0.048
+Epoch: 25 Training_Loss: 3.273100 Validation_Acc: 0.054
+Epoch: 26 Training_Loss: 3.048831 Validation_Acc: 0.053
+Epoch: 27 Training_Loss: 2.800327 Validation_Acc: 0.071
+Epoch: 28 Training_Loss: 2.599139 Validation_Acc: 0.065
+Epoch: 29 Training_Loss: 2.402586 Validation_Acc: 0.101
+Epoch: 30 Training_Loss: 2.203652 Validation_Acc: 0.103
+Epoch: 31 Training_Loss: 1.984271 Validation_Acc: 0.097
+Epoch: 32 Training_Loss: 1.785396 Validation_Acc: 0.113
+Epoch: 33 Training_Loss: 1.651857 Validation_Acc: 0.113
+Epoch: 34 Training_Loss: 1.465505 Validation_Acc: 0.135
+Epoch: 35 Training_Loss: 1.331693 Validation_Acc: 0.134
+Epoch: 36 Training_Loss: 1.191667 Validation_Acc: 0.124
+Epoch: 37 Training_Loss: 1.241745 Validation_Acc: 0.137
+Epoch: 38 Training_Loss: 1.016513 Validation_Acc: 0.149
+Epoch: 39 Training_Loss: 0.897111 Validation_Acc: 0.156
+Epoch: 40 Training_Loss: 0.857197 Validation_Acc: 0.136
+Epoch: 41 Training_Loss: 0.684772 Validation_Acc: 0.157
+Epoch: 42 Training_Loss: 0.635048 Validation_Acc: 0.149
+Epoch: 43 Training_Loss: 0.602160 Validation_Acc: 0.162
+Epoch: 44 Training_Loss: 0.509181 Validation_Acc: 0.167
+Epoch: 45 Training_Loss: 0.470507 Validation_Acc: 0.166
+Epoch: 46 Training_Loss: 0.439272 Validation_Acc: 0.166
+Epoch: 47 Training_Loss: 0.401142 Validation_Acc: 0.180
+Epoch: 48 Training_Loss: 0.379756 Validation_Acc: 0.173
+Epoch: 49 Training_Loss: 0.349045 Validation_Acc: 0.176
+Epoch: 50 Training_Loss: 0.335961 Validation_Acc: 0.164
+Epoch: 51 Training_Loss: 0.308032 Validation_Acc: 0.167
+Epoch: 52 Training_Loss: 0.356737 Validation_Acc: 0.175
+Epoch: 53 Training_Loss: 0.303454 Validation_Acc: 0.188
+Epoch: 54 Training_Loss: 0.296733 Validation_Acc: 0.169
+Epoch: 55 Training_Loss: 0.245482 Validation_Acc: 0.177
+Epoch: 56 Training_Loss: 0.304662 Validation_Acc: 0.175
+Epoch: 57 Training_Loss: 0.246857 Validation_Acc: 0.176
+Epoch: 58 Training_Loss: 0.303587 Validation_Acc: 0.175
+Epoch: 59 Training_Loss: 0.259206 Validation_Acc: 0.173
+Epoch: 60 Training_Loss: 0.177874 Validation_Acc: 0.181
+Epoch: 61 Training_Loss: 0.170716 Validation_Acc: 0.176
+Epoch: 62 Training_Loss: 0.202786 Validation_Acc: 0.177
+Epoch: 63 Training_Loss: 0.233464 Validation_Acc: 0.178
+Epoch: 64 Training_Loss: 0.202397 Validation_Acc: 0.171
