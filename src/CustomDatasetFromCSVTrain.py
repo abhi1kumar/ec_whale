@@ -60,10 +60,10 @@ class CustomDatasetFromCSVTrain(Dataset):
         padding = (delta_w//2, delta_h//2, delta_w-(delta_w//2), delta_h-(delta_h//2))
         img_padded = ImageOps.expand(img_as_img, padding)
 
-        np_im = np.array(img_padded)
+        #np_im = np.array(img_padded)
         #print(np.max(np_im))
-        np_img_aug = self.aug_image(np_im)
-        img_padded = Image.fromarray(np_img_aug.astype('uint8'), 'RGB')
+        #np_img_aug = self.aug_image(np_im)
+        #img_padded = Image.fromarray(np_img_aug.astype('uint8'), 'RGB')
 
         # Transform image to tensor by passsing through the composed version of transforms
         if self.transforms is not None:
