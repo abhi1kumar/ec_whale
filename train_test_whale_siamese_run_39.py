@@ -203,7 +203,7 @@ feature_dim     = 512
 workers         = 3
 save_frequency  = 10
 
-run             = 19
+run             = 39
 arch            = 50
 dropout_flag    = True
 
