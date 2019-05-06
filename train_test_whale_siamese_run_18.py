@@ -35,7 +35,7 @@ from CustomDatasetFromCSV  import CustomDatasetFromCSV
 
 from SiameseNetwork        import SiameseNetwork
 from SiameseNetwork2       import SiameseNetwork2
-from SiameseNetwork3       import SiameseNetwork3
+from SiameseNetwork4       import SiameseNetwork4
 
 from ContrastiveLoss       import ContrastiveLoss
 
@@ -203,7 +203,7 @@ feature_dim     = 512
 workers         = 3 
 save_frequency  = 25
 
-run             = 20
+run             = 18
 arch            = 50
 dropout_flag    = True
 
@@ -250,10 +250,9 @@ print("Using device: {}".format(device))
 # https://towardsdatascience.com/a-gold-winning-solution-review-of-kaggle-humpback-whale-identification-challenge-53b0e3ba1e84
 transformations  = transforms.Compose([transforms.ToTensor()])
 transformations2  = transforms.Compose([transforms.RandomAffine(degrees = 12, translate=(0.036, 0.036), scale=(0.9, 1.1)), transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
-transformations3  = transforms.Compose([transforms.ColorJitter(0.2,0.2,0.2,0.02), transforms.ToTensor()])
-print(transformations3)
+print(transformations2)
 
-dataset_from_csv  = SiameseNetworkDataset(train_file, height = img_dim, width = img_dim, transforms = transformations3)
+dataset_from_csv  = SiameseNetworkDataset(train_file, height = img_dim, width = img_dim, transforms = transformations2)
 train_loader      = torch.utils.data.DataLoader(dataset=dataset_from_csv  ,  batch_size= batch_size, shuffle=True, num_workers = workers)
 
 dataset_from_csv1 = CustomDatasetFromCSV(train_file1, height = img_dim, width = img_dim, transforms = transformations)
@@ -265,7 +264,7 @@ val_loader        = torch.utils.data.DataLoader(dataset=dataset_from_csv2,   bat
 ########################################################################################
 # Get the model
 ########################################################################################
-model = SiameseNetwork3()
+model = SiameseNetwork4()
 
 #model.load_state_dict(torch.load( os.path.join(save_dir, "checkpoint_25.pt")))
 #val_acc = val(model, device, train_loader1, val_loader)
