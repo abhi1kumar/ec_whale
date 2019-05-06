@@ -204,7 +204,7 @@ else:
 
 if dropout_flag:
     print("Using Dropout")
-    model.fc = nn.Sequential(Flatten(), nn.Dropout(0.5), nn.Linear(2048, num_classes))
+    model.fc = nn.Sequential(Flatten(), nn.Dropout(0.25), nn.Linear(2048, num_classes))
 else:
     model.fc = nn.Sequential(Flatten(), nn.Linear(2048, num_classes))
 
