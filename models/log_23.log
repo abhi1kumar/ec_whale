@@ -1,0 +1,245 @@
+in file            = splits/train_5.7k_cropped_remapped_siamese.txt
+Val file           = splits/val_5.7k_cropped_remapped.txt
+Run No             = 23
+Model save folder  = models/run_23
+-------------------------------
+Optimisation Parameters
+-------------------------------
+lr                 = 0.00050
+epochs             = 100
+Batch size         = 48
+Test Batch size    = 16
+Using device: cuda
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=405 error=11 : invalid argument
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 112, 112]           9,408
+       BatchNorm2d-2         [-1, 64, 112, 112]             128
+              ReLU-3         [-1, 64, 112, 112]               0
+         MaxPool2d-4           [-1, 64, 56, 56]               0
+            Conv2d-5           [-1, 64, 56, 56]          36,864
+       BatchNorm2d-6           [-1, 64, 56, 56]             128
+              ReLU-7           [-1, 64, 56, 56]               0
+            Conv2d-8           [-1, 64, 56, 56]          36,864
+       BatchNorm2d-9           [-1, 64, 56, 56]             128
+             ReLU-10           [-1, 64, 56, 56]               0
+       BasicBlock-11           [-1, 64, 56, 56]               0
+           Conv2d-12           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-13           [-1, 64, 56, 56]             128
+             ReLU-14           [-1, 64, 56, 56]               0
+           Conv2d-15           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-16           [-1, 64, 56, 56]             128
+             ReLU-17           [-1, 64, 56, 56]               0
+       BasicBlock-18           [-1, 64, 56, 56]               0
+           Conv2d-19          [-1, 128, 28, 28]          73,728                                                                             [182/479]
+      BatchNorm2d-20          [-1, 128, 28, 28]             256
+             ReLU-21          [-1, 128, 28, 28]               0
+           Conv2d-22          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-23          [-1, 128, 28, 28]             256
+           Conv2d-24          [-1, 128, 28, 28]           8,192
+      BatchNorm2d-25          [-1, 128, 28, 28]             256
+             ReLU-26          [-1, 128, 28, 28]               0
+       BasicBlock-27          [-1, 128, 28, 28]               0
+           Conv2d-28          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-29          [-1, 128, 28, 28]             256
+             ReLU-30          [-1, 128, 28, 28]               0
+           Conv2d-31          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-32          [-1, 128, 28, 28]             256
+             ReLU-33          [-1, 128, 28, 28]               0
+       BasicBlock-34          [-1, 128, 28, 28]               0
+           Conv2d-35          [-1, 256, 14, 14]         294,912
+      BatchNorm2d-36          [-1, 256, 14, 14]             512
+             ReLU-37          [-1, 256, 14, 14]               0
+           Conv2d-38          [-1, 256, 14, 14]         589,824
+      BatchNorm2d-39          [-1, 256, 14, 14]             512
+           Conv2d-40          [-1, 256, 14, 14]          32,768
+      BatchNorm2d-41          [-1, 256, 14, 14]             512
+             ReLU-42          [-1, 256, 14, 14]               0
+       BasicBlock-43          [-1, 256, 14, 14]               0
+           Conv2d-44          [-1, 256, 14, 14]         589,824
+      BatchNorm2d-45          [-1, 256, 14, 14]             512
+             ReLU-46          [-1, 256, 14, 14]               0
+           Conv2d-47          [-1, 256, 14, 14]         589,824
+      BatchNorm2d-48          [-1, 256, 14, 14]             512
+             ReLU-49          [-1, 256, 14, 14]               0
+       BasicBlock-50          [-1, 256, 14, 14]               0
+           Conv2d-51            [-1, 512, 7, 7]       1,179,648
+      BatchNorm2d-52            [-1, 512, 7, 7]           1,024
+             ReLU-53            [-1, 512, 7, 7]               0
+           Conv2d-54            [-1, 512, 7, 7]       2,359,296
+      BatchNorm2d-55            [-1, 512, 7, 7]           1,024                                                                             [146/479]
+           Conv2d-56            [-1, 512, 7, 7]         131,072
+      BatchNorm2d-57            [-1, 512, 7, 7]           1,024
+             ReLU-58            [-1, 512, 7, 7]               0
+       BasicBlock-59            [-1, 512, 7, 7]               0
+           Conv2d-60            [-1, 512, 7, 7]       2,359,296
+      BatchNorm2d-61            [-1, 512, 7, 7]           1,024
+             ReLU-62            [-1, 512, 7, 7]               0
+           Conv2d-63            [-1, 512, 7, 7]       2,359,296
+      BatchNorm2d-64            [-1, 512, 7, 7]           1,024
+             ReLU-65            [-1, 512, 7, 7]               0
+       BasicBlock-66            [-1, 512, 7, 7]               0
+        MaxPool2d-67            [-1, 512, 1, 1]               0
+          Flatten-68                  [-1, 512]               0
+           ResNet-69                  [-1, 512]               0
+           Conv2d-70         [-1, 64, 112, 112]           9,408
+      BatchNorm2d-71         [-1, 64, 112, 112]             128
+             ReLU-72         [-1, 64, 112, 112]               0
+        MaxPool2d-73           [-1, 64, 56, 56]               0
+           Conv2d-74           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-75           [-1, 64, 56, 56]             128
+             ReLU-76           [-1, 64, 56, 56]               0
+           Conv2d-77           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-78           [-1, 64, 56, 56]             128
+             ReLU-79           [-1, 64, 56, 56]               0
+       BasicBlock-80           [-1, 64, 56, 56]               0
+           Conv2d-81           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-82           [-1, 64, 56, 56]             128
+             ReLU-83           [-1, 64, 56, 56]               0
+           Conv2d-84           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-85           [-1, 64, 56, 56]             128
+             ReLU-86           [-1, 64, 56, 56]               0
+       BasicBlock-87           [-1, 64, 56, 56]               0
+           Conv2d-88          [-1, 128, 28, 28]          73,728
+      BatchNorm2d-89          [-1, 128, 28, 28]             256
+             ReLU-90          [-1, 128, 28, 28]               0
+           Conv2d-91          [-1, 128, 28, 28]         147,456                                                                             [110/479]
+      BatchNorm2d-92          [-1, 128, 28, 28]             256
+           Conv2d-93          [-1, 128, 28, 28]           8,192
+      BatchNorm2d-94          [-1, 128, 28, 28]             256
+             ReLU-95          [-1, 128, 28, 28]               0
+       BasicBlock-96          [-1, 128, 28, 28]               0
+           Conv2d-97          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-98          [-1, 128, 28, 28]             256
+             ReLU-99          [-1, 128, 28, 28]               0
+          Conv2d-100          [-1, 128, 28, 28]         147,456
+     BatchNorm2d-101          [-1, 128, 28, 28]             256
+            ReLU-102          [-1, 128, 28, 28]               0
+      BasicBlock-103          [-1, 128, 28, 28]               0
+          Conv2d-104          [-1, 256, 14, 14]         294,912
+     BatchNorm2d-105          [-1, 256, 14, 14]             512
+            ReLU-106          [-1, 256, 14, 14]               0
+          Conv2d-107          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-108          [-1, 256, 14, 14]             512
+          Conv2d-109          [-1, 256, 14, 14]          32,768
+     BatchNorm2d-110          [-1, 256, 14, 14]             512
+            ReLU-111          [-1, 256, 14, 14]               0
+      BasicBlock-112          [-1, 256, 14, 14]               0
+          Conv2d-113          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-114          [-1, 256, 14, 14]             512
+            ReLU-115          [-1, 256, 14, 14]               0
+          Conv2d-116          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-117          [-1, 256, 14, 14]             512
+            ReLU-118          [-1, 256, 14, 14]               0
+      BasicBlock-119          [-1, 256, 14, 14]               0
+          Conv2d-120            [-1, 512, 7, 7]       1,179,648
+     BatchNorm2d-121            [-1, 512, 7, 7]           1,024
+            ReLU-122            [-1, 512, 7, 7]               0
+          Conv2d-123            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-124            [-1, 512, 7, 7]           1,024
+          Conv2d-125            [-1, 512, 7, 7]         131,072
+     BatchNorm2d-126            [-1, 512, 7, 7]           1,024
+            ReLU-127            [-1, 512, 7, 7]               0                                                                              [74/479]
+      BasicBlock-128            [-1, 512, 7, 7]               0
+          Conv2d-129            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-130            [-1, 512, 7, 7]           1,024
+            ReLU-131            [-1, 512, 7, 7]               0
+          Conv2d-132            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-133            [-1, 512, 7, 7]           1,024
+            ReLU-134            [-1, 512, 7, 7]               0
+      BasicBlock-135            [-1, 512, 7, 7]               0
+       MaxPool2d-136            [-1, 512, 1, 1]               0
+         Flatten-137                  [-1, 512]               0
+          ResNet-138                  [-1, 512]               0
+================================================================
+Total params: 22,353,024
+Trainable params: 22,353,024
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 86436.00
+Forward/backward pass size (MB): 125.59
+Params size (MB): 85.27
+Estimated Total Size (MB): 86646.86
+----------------------------------------------------------------
+Train images done
+Val images done
+Epoch: 1 Training_Loss: 0.133750 Val_acc: 0.260671
+Train images done
+Val images done
+Epoch: 2 Training_Loss: 0.099071 Val_acc: 0.260671
+Train images done
+Val images done
+Epoch: 3 Training_Loss: 0.085891 Val_acc: 0.266768
+Train images done
+Val images done
+Epoch: 4 Training_Loss: 0.075585 Val_acc: 0.259146
+Train images done
+Val images done
+Epoch: 5 Training_Loss: 0.067743 Val_acc: 0.271341                                                                                           [38/479]
+Train images done
+Val images done
+Epoch: 6 Training_Loss: 0.060884 Val_acc: 0.254573
+Train images done
+Val images done
+Epoch: 7 Training_Loss: 0.054281 Val_acc: 0.260671
+Train images done
+Val images done
+Epoch: 8 Training_Loss: 0.049842 Val_acc: 0.248476
+Train images done
+Val images done
+Epoch: 9 Training_Loss: 0.045112 Val_acc: 0.243902
+Train images done
+Val images done
+Epoch: 10 Training_Loss: 0.041372 Val_acc: 0.246951
+Train images done
+Val images done
+Epoch: 11 Training_Loss: 0.038081 Val_acc: 0.233232
+Train images done
+Val images done
+Epoch: 12 Training_Loss: 0.035466 Val_acc: 0.254573
+Train images done
+Val images done
+Epoch: 13 Training_Loss: 0.032995 Val_acc: 0.227134
+Train images done
+Val images done
+Epoch: 14 Training_Loss: 0.030099 Val_acc: 0.231707
+Train images done
+Val images done
+Epoch: 15 Training_Loss: 0.027822 Val_acc: 0.222561
+Train images done
+Val images done
+Epoch: 16 Training_Loss: 0.026100 Val_acc: 0.224085
+Train images done
+Val images done
+Epoch: 17 Training_Loss: 0.024057 Val_acc: 0.204268                                                                                           [2/479]
+Train images done
+Val images done
+Epoch: 18 Training_Loss: 0.022605 Val_acc: 0.243902
+Train images done
+Val images done
+Epoch: 19 Training_Loss: 0.020927 Val_acc: 0.222561
+Train images done
+Val images done
+Epoch: 20 Training_Loss: 0.020040 Val_acc: 0.231707
+Train images done
+Val images done
+Epoch: 21 Training_Loss: 0.020162 Val_acc: 0.224085
+Train images done
+Val images done
+Epoch: 22 Training_Loss: 0.018341 Val_acc: 0.231707
+Train images done
+Val images done
+Epoch: 23 Training_Loss: 0.017171 Val_acc: 0.222561
+Train images done
+Val images done
+Epoch: 24 Training_Loss: 0.015968 Val_acc: 0.205793
+Train images done
+Val images done
+Epoch: 25 Training_Loss: 0.015948 Val_acc: 0.224085
+Train images done
+Val images done
+Epoch: 26 Training_Loss: 0.015450 Val_acc: 0.214939
+Train images done
+Val images done
+Epoch: 27 Training_Loss: 0.014254 Val_acc: 0.216463
